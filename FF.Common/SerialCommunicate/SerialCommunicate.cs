@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
 
 namespace FF.Common.SerialCommunicate
 {
@@ -29,7 +29,7 @@ namespace FF.Common.SerialCommunicate
 
         public void Close()
         {
-            sp.Close();
+            if (sp.IsOpen) sp.Close();
         }
 
         /// <summary>
